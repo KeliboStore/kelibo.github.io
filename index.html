@@ -127,7 +127,7 @@ function preload()
 {
 	for (var i = 0; i < photoCount; i++) 
 	{
-		$('#preload').append('<img src="https://kelibostore.com/picture/' + (kelibo + i) + '.png">')
+		$('#preload').append('<img src="https://kelibostore.com/picture/' + (500 + i) + '.png">')
 	};
 	$(window).load(function() 
 	{
@@ -144,7 +144,7 @@ function setup()
 		var newBackgroundSize = 100 + (100-newWidth)/newWidth * 100; //100 + (100 - newWidth);
 		var newTop = ((100 / pieceCount) * i)/2;
 		
-		$('#photo-holder').append('<div class="section" id="piece'+i+'" style="top: ' + newTop + '%; left: ' + newTop + '%; width: ' + newWidth + '%; height: ' + newWidth + '%; background-size:'+newBackgroundSize+'%; background-image: url(\'https://fckveza.com/picture/' + (kelibo + onPhoto) + '.png\')"></div>')
+		$('#photo-holder').append('<div class="section" id="piece'+i+'" style="top: ' + newTop + '%; left: ' + newTop + '%; width: ' + newWidth + '%; height: ' + newWidth + '%; background-size:'+newBackgroundSize+'%; background-image: url(\'https://fckveza.com/picture/' + (500 + onPhoto) + '.png\')"></div>')
 	};
 	nextSlide(); 
 }
@@ -189,7 +189,7 @@ function nextSlide()
 
 function completeRotation(piece)
 {
-	piece.css('background-image', 'url(https://kelibostore.com/picture/' + (kelibo + onPhoto) + '.png)');
+	piece.css('background-image', 'url(https://kelibostore.com/picture/' + (500 + onPhoto) + '.png)');
 	TweenMax.to(piece, 2, {
 		directionalRotation: '0_short', 
 		onComplete: finishPieceanimation, 
